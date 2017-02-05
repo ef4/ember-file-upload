@@ -38,7 +38,7 @@ function normalizeOptions(file, url, options) {
   }
 
   if (options.payloadType === 'binary') {
-    options.headers['content-type'] = 'application/octet-stream';
+    options.headers['content-type'] = options.contentType || 'application/octet-stream';
   }
 
   // Set Content-Type in the data payload
